@@ -6,13 +6,14 @@ from scipy.fftpack import fft
 
 def dataCreation():
     data = []
-    for i in range (0,500):
+    for i in range (0,256):
         data.append(float(format(random.uniform(0,6),".2f")))
     return data
 
 def main():
     input = dataCreation()
     y = fft(input)
-    print(y)
+    for i in y:
+        print (i)
 
 main()
